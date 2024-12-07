@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}
+    Shees Django
+{% endblock %}
+{% block content %}
+    <h1 class="text-center text-white mt-4">Are you sure you want to delete</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button class="btn btn-denger">Delete</button>
+        <a class="btn btn-success"href="{% url 'tweets_list' %}">cancel</a>
+    </form>
+{% endblock %}
